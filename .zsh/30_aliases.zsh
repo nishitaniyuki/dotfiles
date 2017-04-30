@@ -22,3 +22,15 @@ elif which putclip >/dev/null 2>&1 ; then
     # Cygwin
     alias -g C='| putclip'
 fi
+
+case ${OSTYPE} in
+    darwin*)
+        #Mac
+        export CLICOLOR=1
+        alias ls='ls -G -F'
+        ;;
+    linux*)
+        #Linux
+        alias ls='ls -F --color=auto'
+        ;;
+esac
