@@ -1,5 +1,4 @@
 typeset -gx -U path
-setopt no_global_rcs
 
 # AUTOLOAD
 autoload -Uz run-help
