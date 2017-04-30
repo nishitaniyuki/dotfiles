@@ -23,7 +23,7 @@ export SVN_EDITOR="${EDITOR}"
 export PAGER=less
 
 # HISTORY
-export HISTFILES=~/.zsh_history
+export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=1000000
 export LISTMAX=50
