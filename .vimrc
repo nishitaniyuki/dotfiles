@@ -43,6 +43,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'mattn/emmet-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
+Plug 'justmao945/vim-clang'
 
 " Lint
 Plug 'w0rp/ale', { 'on': 'ALEEnable' }
