@@ -110,6 +110,7 @@ set clipboard=unnamed
 set foldlevelstart=99
 set grepformat=%f:%l:%c:%m,%f:%l:%m
 set completeopt=menuone,preview
+set complete-=i
 set cursorline
 hi clear CursorLine
 silent! set cryptmethod=blowfish2
