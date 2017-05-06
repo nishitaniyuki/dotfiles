@@ -86,7 +86,6 @@ set backspace=indent,eol,start
 set timeoutlen=500
 set whichwrap=b,s
 set shortmess=aIT
-set hlsearch
 set incsearch
 set hidden
 set ignorecase smartcase
