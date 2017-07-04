@@ -1,0 +1,36 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+  user = nishitaniyuki
+  email = yuki.nishitani85@gmail.com
+  excludesfile = /Users/nishitani/.gitignore_global
+  editor = vim
+  ignorecase = false
+[alias]
+  a = add
+  c = commit
+  co = checkout
+  d = diff
+  l = log
+  r = rebase
+  s = status
+  sh = show
+[user]
+  email = yuki.nishitani85@gmail.com
+  name = nishitani yuki
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[credential]
+  helper = osxkeychain
+[ghq]
+  root = ~/src
+  root = ~/.gvm/pkgsets/go1.7.3/global/src
+
