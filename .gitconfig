@@ -32,5 +32,4 @@
   helper = osxkeychain
 [ghq]
   root = ~/src
-  root = ~/.gvm/pkgsets/go1.7.3/global/src
 
