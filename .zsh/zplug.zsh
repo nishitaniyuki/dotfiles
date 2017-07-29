@@ -12,3 +12,10 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug "b4b4r07/enhancd", use:init.sh
 
+# zplug "junegunn/fzf-bin", \
+#   as:command, \
+#   from:gh-r, \
+#   use: "*darwin*amd64*", \
+#   rename-to:"fzf", \
+#   frozen:1
+
