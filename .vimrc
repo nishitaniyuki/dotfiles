@@ -37,6 +37,7 @@ Plug 'tpope/vim-fugitive'
 
 " Lang
 Plug 'fatih/vim-go'
+Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
