@@ -53,7 +53,7 @@ Plug 'w0rp/ale', { 'on': 'ALEEnable' }
 Plug 'tpope/vim-tbone'
 
 " Utils
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-emoji'
 Plug 'tpope/vim-surround'
