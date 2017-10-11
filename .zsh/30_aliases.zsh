@@ -12,7 +12,7 @@ alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
 
-alias tmux='tmux -2'
+alias t='tmux -2'
 
 if which pbcopy >/dev/null 2>&1 ; then
     # Mac
