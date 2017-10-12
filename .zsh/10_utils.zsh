@@ -1,5 +1,5 @@
-# peco and history
-function peco-select-history() {
+# fzf and history
+function fzf-select-history() {
   local tac
   if which tac > /dev/null; then
     tac="tac"
@@ -9,28 +9,28 @@ function peco-select-history() {
   BUFFER=$(history -n 1 | \
     grep -v "ls" | \
     eval $tac | \
-    peco --query "$LBUFFER")
+    fzf --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
-zle -N peco-select-history
-bindkey '^r' peco-select-history
+zle -N fzf-select-history
+bindkey '^r' fzf-select-history
 
-# ghq and peco
-function peco-src () {
-  local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+# ghq and fzf
+function fzf-src () {
+  local selected_dir=$(ghq list | fzf --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
+    BUFFER="cd ${HOME}/src/${selected_dir}"
     zle accept-line
   fi
   zle clear-screen
 }
-zle -N peco-src
-bindkey '^]' peco-src
+zle -N fzf-src
+bindkey '^]' fzf-src
 
-# peco and git branch
-function peco-git-branch-checkout() {
-  local selected_branch_name="$(git branch -a | peco | tr -d ' ')"
+# fzf and git branch
+function fzf-git-branch-checkout() {
+  local selected_branch_name="$(git branch -a | fzf | tr -d ' ')"
   case "$selected_branch_name" in
     *-\>* )
       selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')";;
@@ -43,8 +43,11 @@ function peco-git-branch-checkout() {
   fi
   zle clear-screen
 }
-zle -N peco-git-branch-checkout
-bindkey '^g^b' peco-git-branch-checkout
+zle -N fzf-git-branch-checkout
+bindkey '^g^b' fzf-git-branch-checkout
+
+# cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -53,9 +56,6 @@ eval "$(rbenv init -)"
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# gvm
-[[ -s "/Users/nishitani/.gvm/scripts/gvm" ]] && source "/Users/nishitani/.gvm/scripts/gvm"
 
 # clojure
 export PATH="$HOME/.lein:$PATH"
@@ -95,6 +95,9 @@ function code {
     open -a "Visual Studio Code" "$argPath"
   fi
 }
+
+# FZF
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 # Git
 g() {
