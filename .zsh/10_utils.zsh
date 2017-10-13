@@ -9,7 +9,7 @@ function fzf-select-history() {
   BUFFER=$(history -n 1 | \
     grep -v "ls" | \
     eval $tac | \
-    fzf --query "$LBUFFER")
+    fzf --no-sort --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
@@ -18,7 +18,7 @@ bindkey '^r' fzf-select-history
 
 # ghq and fzf
 function fzf-src () {
-  local selected_dir=$(ghq list | fzf --query "$LBUFFER")
+  local selected_dir=$(ghq list | fzf --no-sort --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${HOME}/src/${selected_dir}"
     zle accept-line
