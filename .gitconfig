@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
   user = nishitaniyuki
   email = yuki.nishitani85@gmail.com
-  excludesfile = /Users/nishitani/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = vim
   ignorecase = false
 [alias]
