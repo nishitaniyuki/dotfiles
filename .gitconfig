@@ -16,8 +16,9 @@
 [user]
   email = yuki.nishitani85@gmail.com
   name = nishitani yuki
-[credential]
-  helper = osxkeychain
 [ghq]
   root = ~/src
+[include]
+  path = ~/.gitconfig.os
+  path = ~/.gitconfig.private
 
