@@ -1,9 +1,8 @@
 [core]
-  user = nishitaniyuki
-  email = yuki.nishitani85@gmail.com
   excludesfile = ~/.gitignore_global
   editor = vim
   ignorecase = false
+
 [alias]
   a = add
   c = commit
@@ -13,11 +12,14 @@
   r = rebase
   s = status
   sh = show
+
 [user]
+  name = nishitaniyuki
   email = yuki.nishitani85@gmail.com
-  name = nishitani yuki
+
 [ghq]
   root = ~/src
+
 [include]
   path = ~/.gitconfig.os
   path = ~/.gitconfig.private
