@@ -34,6 +34,7 @@ packages=(
     golang.org/x/tools/cmd/present
 
     # Golang dev
+    github.com/golang/lint/golint
     github.com/nsf/gocode
     github.com/rogpeppe/godef
     github.com/dougm/goflymake
