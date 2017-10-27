@@ -98,7 +98,7 @@ set expandtab smarttab
 set scrolloff=5
 set encoding=utf-8
 set list
-set listchars=tab:\|\ ,
+set listchars=tab:»\ ,trail:-,extends:»,precedes:«,nbsp:%
 set virtualedit=block
 set nojoinspaces
 set diffopt=filler,vertical
