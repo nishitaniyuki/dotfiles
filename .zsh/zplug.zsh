@@ -1,5 +1,3 @@
-ZPLUG_PROTOCOL=ssh
-
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "~/.zsh", from:local, use:"<->_*.zsh"
 
