@@ -55,7 +55,13 @@ install_darwin_packages() {
 }
 
 install_linux_package() {
-  # TODO
+  # TODO: consider sudo
+  # TODO: maybe it's needed to run `apt-get update` before install
+  packages=(
+    clang
+    lldb
+  )
+  apt-get install ${packages[@]}
 }
 
 if [ `uname` = "Darwin" ]; then
