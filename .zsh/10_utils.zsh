@@ -18,7 +18,7 @@ bindkey '^r' fzf-select-history
 
 # ghq and fzf
 function fzf-src () {
-  local selected_dir=$(ghq list | fzf --no-sort --query "$LBUFFER")
+  local selected_dir=$(ghq list | fzf --exact --no-sort --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${HOME}/src/${selected_dir}"
     zle accept-line
