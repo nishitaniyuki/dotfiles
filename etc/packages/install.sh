@@ -58,8 +58,8 @@ install_linux_package() {
   # TODO
 }
 
-if [ uname = "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
   install_darwin_packages
-elif [ uname = "Linux"]; then
+elif [ `uname` = "Linux"]; then
   install_linux_packages
 fi
