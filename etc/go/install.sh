@@ -2,9 +2,9 @@
 
 # install Go
 export PLATFORM
-if [ uname = "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
   PLATFORM="darwin"
-elif [ uname = "Linux"]; then
+elif [ `uname` = "Linux"]; then
   PLATFORM="linux"
 fi
 
