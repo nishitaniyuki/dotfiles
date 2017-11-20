@@ -34,6 +34,7 @@ Plug 'junegunn/seoul256.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Lang
 Plug 'fatih/vim-go'
