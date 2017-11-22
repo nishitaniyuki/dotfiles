@@ -57,6 +57,7 @@ Plug 'tpope/vim-tbone'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-emoji'
+Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
