@@ -46,6 +46,7 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
 Plug 'justmao945/vim-clang'
+Plug 'cespare/vim-toml'
 
 " Lint
 Plug 'w0rp/ale', { 'on': 'ALEEnable' }
