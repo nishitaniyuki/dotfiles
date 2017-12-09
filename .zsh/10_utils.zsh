@@ -14,7 +14,6 @@ function fzf-select-history() {
   zle clear-screen
 }
 zle -N fzf-select-history
-bindkey '^r' fzf-select-history
 
 # ghq and fzf
 function fzf-src () {
@@ -26,7 +25,6 @@ function fzf-src () {
   zle clear-screen
 }
 zle -N fzf-src
-bindkey '^]' fzf-src
 
 # fzf and git branch
 function fzf-git-branch-checkout() {
@@ -44,7 +42,6 @@ function fzf-git-branch-checkout() {
   zle clear-screen
 }
 zle -N fzf-git-branch-checkout
-bindkey '^g^b' fzf-git-branch-checkout
 
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
