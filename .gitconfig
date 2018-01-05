@@ -2,6 +2,7 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   ignorecase = false
+  pager = less -R -F -X
 
 [alias]
   a = add
