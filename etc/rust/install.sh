@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install Rust if not installed
-if [ ! $(which rustup) ]; then
+if [ ! $(which rustc) ]; then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
