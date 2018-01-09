@@ -7,6 +7,7 @@ fi
 
 # install Rust packages
 packages=(
+  fd-find
   ripgrep
 )
 for pkg in ${packages[@]}
