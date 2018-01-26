@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # install Go
+
 export PLATFORM
 if [ `uname` = "Darwin" ]; then
   PLATFORM="darwin"
@@ -10,7 +11,7 @@ fi
 
 GOVERSION=${1}
 if [ -z $GOVERSION ]; then
-  GOVERSION=1.9
+  GOVERSION=1.9.3
 fi
 
 if [ -d ${HOME}/.go/${GOVERSION} ]; then
@@ -45,7 +46,7 @@ packages=(
     github.com/tcnksm/ghr
     github.com/tcnksm/gotests
 )
-for pkg in ${packages[$]}
+for pkg in ${packages[@]}
 do
   go get -v $pkg
 done
