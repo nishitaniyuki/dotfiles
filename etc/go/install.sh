@@ -39,14 +39,8 @@ packages=(
     # Golang dev
     github.com/golang/lint/golint
     github.com/nsf/gocode
-    github.com/rogpeppe/godef
-    github.com/dougm/goflymake
     github.com/jstemmer/gotags
-    github.com/k0kubun/pp
-    github.com/tools/godep
     github.com/motemen/gore
-    github.com/tcnksm/ghr
-    github.com/tcnksm/gotests
 )
 for pkg in ${packages[@]}
 do
