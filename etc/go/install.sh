@@ -44,5 +44,5 @@ packages=(
 )
 for pkg in ${packages[@]}
 do
-  go get -v $pkg
+  go get -u -v $pkg
 done
