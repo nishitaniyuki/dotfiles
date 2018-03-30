@@ -27,20 +27,20 @@ fi
 # install Go packages
 packages=(
     # General usage
-    github.com/motemen/ghq
     github.com/junegunn/fzf/...
+    github.com/motemen/ghq
 
     # Go cmd
+    golang.org/x/tools/cmd/benchcmp
     golang.org/x/tools/cmd/godoc
     golang.org/x/tools/cmd/goimports
-    golang.org/x/tools/cmd/benchcmp
     golang.org/x/tools/cmd/present
 
     # Golang dev
     github.com/golang/lint/golint
-    github.com/nsf/gocode
     github.com/jstemmer/gotags
     github.com/motemen/gore
+    github.com/nsf/gocode
 )
 for pkg in ${packages[@]}
 do
