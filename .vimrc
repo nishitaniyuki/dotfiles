@@ -46,6 +46,7 @@ Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
 Plug 'justmao945/vim-clang'
 Plug 'cespare/vim-toml'
+Plug 'uarun/vim-protobuf'
 
 " Lint
 Plug 'w0rp/ale', { 'on': 'ALEEnable' }
