@@ -9,4 +9,4 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug "b4b4r07/enhancd", use:init.sh
-
+zplug "~/src/github.com/junegunn/fzf", from:local, use:shell/key-bindings.zsh
