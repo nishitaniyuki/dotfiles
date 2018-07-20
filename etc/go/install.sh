@@ -18,7 +18,7 @@ if [ -d ${HOME}/.go/${GOVERSION} ]; then
   echo "${GOVERSION} is already installed"
 else
   mkdir -p ${HOME}/.go/${GOVERSION}
-  trap "rm -rf ${HOME}/.go/${GOVERSION}" 1 2 3 15
+  trap "rm -rf ${HOME}/.go/${GOVERSION} && rm -f ${HOME}/.go/.goversion" 1 2 3 15
   curl http://storage.googleapis.com/golang/go${GOVERSION}.${PLATFORM}-amd64.tar.gz | tar xvzf - -C ${HOME}/.go/${GOVERSION}/ --strip-components=1
   echo $GOVERSION > ${HOME}/.go/.goversion
   trap 1 2 3 15

@@ -54,7 +54,7 @@ install_darwin_packages() {
   brew install ${packages[@]} && brew cleanup
 }
 
-install_linux_package() {
+install_linux_packages() {
   packages=(
     clang
     lldb
@@ -65,6 +65,6 @@ install_linux_package() {
 
 if [ `uname` = "Darwin" ]; then
   install_darwin_packages
-elif [ `uname` = "Linux"]; then
+elif [ `uname` = "Linux" ]; then
   install_linux_packages
 fi
