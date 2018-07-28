@@ -16,7 +16,7 @@ end
 
 [
   # General usage
-  'github.com/junegunn/fzf/...',
+  'github.com/junegunn/fzf',
   'github.com/motemen/ghq',
   # Go cmd
   'golang.org/x/tools/cmd/benchcmp',
@@ -31,5 +31,6 @@ end
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do
     user node[:user]
+    not_if "test -d #{ENV['HOME']}/src/#{pkg}"
   end
 end
