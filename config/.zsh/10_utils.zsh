@@ -54,33 +54,6 @@ eval "$(rbenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# clojure
-export PATH="$HOME/.lein:$PATH"
-
-# cask
-export PATH="$HOME/.cask/bin:$PATH"
-
-# haskell
-export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
-if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# android sdk
-export ANDROID_HOME="$HOME/Library/android/sdk"
-
-# depot_tools (for V8)
-export PATH="$HOME/Applications/depot_tools:$PATH"
-
-# calibre
-export PATH="/Applications/calibre.app/Contents/console.app/Contents/MacOS:$PATH"
-
-# Tex
-export PATH="/Library/Tex/texbin:$PATH"
-
 # Visual Studio Code
 function code {
   if [[ $# = 0 ]]
