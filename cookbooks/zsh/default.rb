@@ -10,6 +10,6 @@ execute 'curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zpl
 end
 
 execute "chsh -s /usr/bin/zsh #{node[:user]}" do
-  only_if "getent passwd #{node[:user]} | cut -d: -f7 | grep -q '/bin/bash$'"
   user 'root'
+  only_if "getent passwd #{node[:user]} | cut -d: -f7 | grep -q '/bin/bash$'"
 end
