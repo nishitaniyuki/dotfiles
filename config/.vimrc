@@ -1,23 +1,7 @@
-" ----------------------------------------------------------------------------
-"
-" .VIMRC OF NISHITANIYUKI
-"
-" ----------------------------------------------------------------------------
-
 unlet! skip_defaults_vim
 silent! source $VIMRUNTIME/defaults.vim
 
-" ----------------------------------------------------------------------------
-"
-" VIM-PLUG
-"
-" ----------------------------------------------------------------------------
-
 silent! if plug#begin('~/.vim/plugged')
-
-" Browsing
-Plug 'Yggdroot/indentLine', { 'on': 'IndentLinesEnable' }
-autocmd! User indentLine doautocmd indentLine Syntax
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 augroup nerd_loader
   autocmd!
@@ -28,49 +12,21 @@ augroup nerd_loader
     \|  execute 'autocmd! nerd_loader'
     \| endif
 augroup END
-
-" Colors
 Plug 'junegunn/seoul256.vim'
-
-" Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-" Lang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
-Plug 'mattn/emmet-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
-Plug 'justmao945/vim-clang'
 Plug 'cespare/vim-toml'
 Plug 'uarun/vim-protobuf'
-
-" Lint
-Plug 'w0rp/ale', { 'on': 'ALEEnable' }
-
-" Tmux
-Plug 'tpope/vim-tbone'
-
-" Utils
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-emoji'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
-
 call plug#end()
 endif
-
-" ----------------------------------------------------------------------------
-"
-" GENERAL
-"
-" ----------------------------------------------------------------------------
 
 let mapleader = ' '
 let maplocalleader = ' '
@@ -123,23 +79,13 @@ set pastetoggle=<C-j>
 set modelines=2
 set synmaxcol=1000
 colo seoul256
-
 set nostartofline
-
 if exists('&fixeol')
   set nofixeol
 endif
-
-" MacVim
 set noimd
 set imi=1
 set ims=-1
-
-" ----------------------------------------------------------------------------
-"
-" MAPPINGS
-"
-" ----------------------------------------------------------------------------
 
 nnoremap ,s :source %<CR>
 nnoremap <C-h> :tabprevious<CR>
@@ -155,13 +101,6 @@ autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabsto
 autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-" ----------------------------------------------------------------------------
-"
-" LANG
-"
-" ----------------------------------------------------------------------------
-
-" Go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_fields = 1
@@ -171,18 +110,9 @@ let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
 let g:go_list_type = "quickfix"
 
-" ----------------------------------------------------------------------------
-"
-" Utils
-"
-" ----------------------------------------------------------------------------
-
-" Fzf
-
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-" nnoremap <silent> <Leader><Leader> :Files<CR>
 nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 nnoremap <silent> <Leader>C        :Colors<CR>
 nnoremap <silent> <Leader><Enter>  :Buffers<CR>
@@ -218,16 +148,9 @@ command! PlugHelp call fzf#run(fzf#wrap({
   \ 'source':  sort(keys(g:plugs)),
   \ 'sink':    function('s:plugs_sink')}))
 
-" IndentLine
-let g:indentLine_char = '|'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '.'
-
-" NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
-" Lightline
 let g:lightline = {
   \ 'colorscheme': 'seoul256',
   \ }
