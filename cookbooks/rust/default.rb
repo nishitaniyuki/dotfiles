@@ -3,6 +3,8 @@ execute "curl https://sh.rustup.rs -sSf | sh -s -- -y" do
   not_if "test -f #{ENV['HOME']}/.cargo/bin/rustc"
 end
 
+package 'cmake' if node[:platform] == 'darwin'
+
 ["fd-find", "ripgrep", "bat"].each do |pkg|
   execute "#{ENV['HOME']}/.cargo/bin/cargo install --verbose #{pkg}" do
     user node[:user]
