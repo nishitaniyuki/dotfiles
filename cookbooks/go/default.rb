@@ -27,7 +27,7 @@ end
   'github.com/golang/lint/golint',
   'github.com/jstemmer/gotags',
   'github.com/motemen/gore',
-  'github.com/nsf/gocode'
+  'github.com/stamblerre/gocode'
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do
     user node[:user]
