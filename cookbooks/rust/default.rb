@@ -5,7 +5,7 @@ end
 
 package 'cmake' if node[:platform] == 'darwin'
 
-["fd-find", "ripgrep", "bat"].each do |pkg|
+["fd-find", "ripgrep"].each do |pkg|
   execute "#{ENV['HOME']}/.cargo/bin/cargo install --verbose #{pkg}" do
     user node[:user]
     not_if %Q[#{ENV['HOME']}/.cargo/bin/cargo install --list | grep "^#{pkg} "]
