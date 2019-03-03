@@ -1,4 +1,4 @@
-GO_VERSION = '1.11.4'
+GO_VERSION = '1.12'
 
 directory "#{ENV['HOME']}/.go/#{GO_VERSION}" do
   owner node[:user]
