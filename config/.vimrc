@@ -100,7 +100,7 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 autocmd InsertLeave * set nopaste
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype c setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 let g:go_fmt_command = "goimports"
 let g:go_highlight_build_constraints = 1
