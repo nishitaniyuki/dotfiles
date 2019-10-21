@@ -5,6 +5,13 @@ end
 
 package 'cmake' if node[:platform] == 'darwin'
 
+["rustfmt"].each do |component|
+  execute "#{ENV['HOME']}/.cargo/bin/rustup component add #{component}" do
+    user node[:user]
+    not_if %Q[#{ENV['HOME']}/.cargo/bin/rustup component list | grep "^#{component} "]
+  end
+end
+
 ["fd-find", "ripgrep"].each do |pkg|
   execute "#{ENV['HOME']}/.cargo/bin/cargo install --verbose #{pkg}" do
     user node[:user]
