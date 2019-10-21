@@ -111,6 +111,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_types = 1
 let g:go_list_type = "quickfix"
 
+let g:rustfmt_autosave = 1
+
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
