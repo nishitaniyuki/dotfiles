@@ -19,6 +19,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
 Plug 'cespare/vim-toml'
+Plug 'hashivim/vim-terraform'
 Plug 'uarun/vim-protobuf'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -112,6 +113,9 @@ let g:go_highlight_types = 1
 let g:go_list_type = "quickfix"
 
 let g:rustfmt_autosave = 1
+
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1
 
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
