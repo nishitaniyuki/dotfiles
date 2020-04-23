@@ -1,4 +1,4 @@
-GO_VERSION = '1.12'
+GO_VERSION = '1.13.6'
 
 directory "#{ENV['HOME']}/.go/#{GO_VERSION}" do
   owner node[:user]
@@ -23,10 +23,9 @@ end
   'golang.org/x/tools/cmd/godoc',
   'golang.org/x/tools/cmd/goimports',
   'golang.org/x/tools/cmd/present',
+  'golang.org/x/lint/golint',
   # Golang dev
-  'github.com/golang/lint/golint',
   'github.com/jstemmer/gotags',
-  'github.com/motemen/gore',
   'github.com/stamblerre/gocode'
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do

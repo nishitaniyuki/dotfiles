@@ -13,8 +13,7 @@ augroup nerd_loader
     \| endif
 augroup END
 Plug 'junegunn/seoul256.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'fatih/vim-go', { 'tag': 'v1.22', 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'honza/dockerfile.vim'
 Plug 'tpope/vim-endwise'
