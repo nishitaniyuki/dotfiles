@@ -1,19 +1,10 @@
-umask 022
-limit coredumpsize 0
-bindkey -d
+bindkey -e
 
-if [[ -f ~/.zplug/init.zsh ]]; then
-  export ZPLUG_LOADFILE=~/.zsh/zplug.zsh
-  source ~/.zplug/init.zsh
+for CONF in $(ls "${HOME}/.zsh/"); do
+  source "${HOME}/.zsh/${CONF}"
+done
 
-  if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-      echo; zplug install
-    fi
-    echo
-  fi
+source <(kubectl completion zsh)
 
-  zplug load
-fi
-
+export STARSHIP_CONFIG="${HOME}/.starship"
+eval "$(starship init zsh)"

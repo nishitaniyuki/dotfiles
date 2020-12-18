@@ -4,9 +4,9 @@ dotfile '.zsh'
 dotfile '.zshrc'
 dotfile '.zshenv'
 
-execute 'curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh' do
+execute "curl -fsSL https://starship.rs/install.sh | bash -s -- -f -b #{ENV['HOME']}/bin" do
   user node[:user]
-  not_if "test -f #{ENV['HOME']}/.zplug/README.md"
+  not_if "test -f #{ENV['HOME']}/bin/starship"
 end
 
 execute "chsh -s /usr/bin/zsh #{node[:user]}" do
