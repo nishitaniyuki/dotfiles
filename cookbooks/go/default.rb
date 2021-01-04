@@ -20,7 +20,7 @@ end
   'github.com/motemen/ghq',
   # Golang dev
   'golang.org/x/tools/cmd/goimports',
-  'honnef.co/go/tools/cmd/staticcheck'
+  'honnef.co/go/tools/cmd/staticcheck',
   'golang.org/x/tools/gopls@latest',
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do
