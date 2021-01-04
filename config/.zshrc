@@ -1,6 +1,6 @@
 bindkey -e
 
-source <(kubectl completion zsh)
+source <($HOME/bin/kubectl completion zsh)
 
 for CONF in $(ls "${HOME}/.zsh/"); do
   source "${HOME}/.zsh/${CONF}"
