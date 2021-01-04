@@ -18,15 +18,10 @@ end
   # General usage
   'github.com/junegunn/fzf',
   'github.com/motemen/ghq',
-  # Go cmd
-  'golang.org/x/tools/cmd/benchcmp',
-  'golang.org/x/tools/cmd/godoc',
-  'golang.org/x/tools/cmd/goimports',
-  'golang.org/x/tools/cmd/present',
-  'golang.org/x/lint/golint',
   # Golang dev
-  'github.com/jstemmer/gotags',
-  'github.com/stamblerre/gocode'
+  'golang.org/x/tools/cmd/goimports',
+  'honnef.co/go/tools/cmd/staticcheck'
+  'golang.org/x/tools/gopls@latest',
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do
     user node[:user]
