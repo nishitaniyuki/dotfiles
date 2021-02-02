@@ -21,7 +21,7 @@ end
   # Golang dev
   'golang.org/x/tools/cmd/goimports',
   'honnef.co/go/tools/cmd/staticcheck',
-  'golang.org/x/tools/gopls@latest',
+  'golang.org/x/tools/gopls',
 ].each do |pkg|
   execute "GOPATH=#{ENV['HOME']} #{ENV['HOME']}/.go/#{GO_VERSION}/bin/go get -u #{pkg}" do
     user node[:user]
