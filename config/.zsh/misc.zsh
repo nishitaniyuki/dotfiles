@@ -1,1 +1,2 @@
 export PLANTUML_LIMIT_SIZE=16384
+export PATH="${PATH}:${HOME}/bin"
